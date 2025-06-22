@@ -13,11 +13,11 @@ const port = 4000
  app.use(express.json())
  app.use(cors({
   origin: [
-    'https://foodd-delivery-app.netlify.app/',     // ✅ your real Netlify frontend URL
-    '',        // ✅ optional if admin too
+    'https://foodd-delivery-app.netlify.app',
+    'http://localhost:3000'
   ],
 
- }))
+}));
  app.use('/uploads', express.static('uploads'))
 //db connection
 connectDB()
