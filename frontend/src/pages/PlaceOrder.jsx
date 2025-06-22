@@ -65,7 +65,7 @@ const PlaceOrder = () => {
    
     console.log(formik.values)
   return (
-    <div className='flex justify-between flex-col sm:flex-row main-container py-16'>
+    <div className='flex sm:justify-between flex-col sm:flex-row main-container py-16'>
      <div className="left sm:w-[40%] w-full">
         <p className='text-3xl font-semibold'>Delivery Information</p>
      <form className='flex flex-col gap-4 mt-2' onSubmit={formik.handleSubmit} >
