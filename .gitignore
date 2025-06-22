@@ -1,0 +1,17 @@
+# Ignore env files
+.env
+
+# Ignore node_modules
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Logs
+*.log
+
+# OS/IDE junk
+.DS_Store
+Thumbs.db
+.vscode/
