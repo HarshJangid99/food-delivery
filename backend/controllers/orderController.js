@@ -45,8 +45,8 @@ unit_amount : items.price * 100
     },
     quantity : cartItems[items._id.toString()]
 })),
-success_url : 'http://localhost:5173/order-success',
-cancel_url : 'http://localhost:5173/order-cancel'
+success_url : 'https://foodd-delivery-app.netlify.app/order-success',
+cancel_url : 'https://foodd-delivery-app.netlify.app/order-cancel'
 })
 return res.json({ success : true ,id : session.id})
 }catch(err){
