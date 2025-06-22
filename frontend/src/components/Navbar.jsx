@@ -7,6 +7,12 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 const Navbar = ({handleOpen}) => {
+  const menus = [
+   {name: "home", link : "/"} ,
+     {name: "menu", link : "/menu"} ,
+     {name: "about us", link : "/about"} 
+   
+]
     const [activeTab , setActiveTab] = useState('home')
     const [profile , setProfile] = useState()
     const [toggle , setToggle] = useState(false)
@@ -77,9 +83,3 @@ navigate(path)
 }
 
 export default Navbar
-const menus = [
-   {name: "home", link : "/"} ,
-     {name: "menu", link : "/menu"} ,
-     {name: "about us", link : "/about"} 
-   
-]
