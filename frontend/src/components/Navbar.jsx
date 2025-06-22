@@ -57,7 +57,7 @@ navigate(path)
     <div className='menus hidden md:block'>
      <ul className='flex gap-5 text-[#49557e] text-lg'>
         {menus.map((value,index)=>(
-            <li key={index} className={`text-lg cursor-pointer ${activeTab == value ? 'border-b-2 border-[#49557e]' : ''}`}onClick={()=>handleclick(value.name , value.path)}>{value.name}</li>
+            <li key={index} className={`text-lg cursor-pointer ${activeTab == value.name ? 'border-b-2 border-[#49557e]' : ''}`}onClick={()=>handleclick(value.name , value.path)}>{value.name}</li>
         ))}
      </ul>
     </div>
