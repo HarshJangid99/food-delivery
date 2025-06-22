@@ -66,7 +66,7 @@ const PlaceOrder = () => {
     console.log(formik.values)
   return (
     <div className='flex justify-between main-container py-16'>
-     <div className="left w-[40%]">
+     <div className="left sm:w-[40%] w-full">
         <p className='text-3xl font-semibold'>Delivery Information</p>
      <form className='flex flex-col gap-4 mt-2' onSubmit={formik.handleSubmit} >
 <div className='flex gap-2 w-full'>
@@ -84,17 +84,17 @@ const PlaceOrder = () => {
     <TextField name='country' fullWidth placeholder='Country' value={formik.values.country} onChange={formik.handleChange}/>
 </div>
 <TextField name='phone' placeholder='Phone' value={formik.values.phone} onChange={formik.handleChange}/>
-<button type='submit'>Proceed</button>
+<button type='submit' className=' w-fit bg-[tomato] text-white px-5 py-1' onClick={()=>navigate("/place-order")}>Proceed To Checkout</button>
      </form>
      </div>
-     <div className="right w-[50%] flex flex-col gap-4">
+     <div className="right sm:w-[50%] w-full flex flex-col gap-4">
                 <p className='font-semibold text-2xl'>Cart Totals</p>
                   
                         <p className='flex justify-between'><span>Sub Total </span><span>{total} </span></p>
                         <p className='flex justify-between'>Delivery Fee <span>$5</span></p>
                         <p className='flex justify-between'>Total <span>${total + 5}</span></p>
                     
-                    <button className=' w-fit bg-[tomato] text-white px-5 py-1' onClick={()=>navigate("/place-order")}>Proceed To Checkout</button>
+                    
             </div>
     </div>
   )
