@@ -5,6 +5,8 @@ export const StoreContext = createContext()
 
 const StoreContextProvider = ({children})=>{
 const [activeMenu, setActiveMenu] = useState(() => localStorage.getItem("category") || "All");
+const [orderPlaced, setOrderPlaced] = useState(false);
+
     const [cartItems , setCartItems] = useState({})
     const [token , setToken] = useState(localStorage.getItem("token") || "")
     const [food , setFood] = useState([])
@@ -39,7 +41,8 @@ const contextValue = {
     setToken,
     food,
     activeMenu,
-    setActiveMenu
+    setActiveMenu,
+    setOrderPlaced
 }
         const updateCart = async()=>{
 try{

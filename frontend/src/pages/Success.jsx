@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import { StoreContext } from '../context/StoreContext'
 
 const Success = () => {
-    const {token} = useContext(StoreContext)
+    const {token , setToken , setCartItems} = useContext(StoreContext)
     const details = JSON.parse(localStorage.getItem('userdetails'))
       useEffect(async()=>{
   const placeOrder = async () => {
@@ -32,7 +32,10 @@ const Success = () => {
 
         if (response.data.success) {
           alert(response.data.message)
-          localStorage.removeItem("userdetails") // ✅ Clean up
+          localStorage.removeItem("userdetails")
+          setCartItems({})
+          
+ // ✅ Clean up
         } else {
           alert(response.data.message)
         }
