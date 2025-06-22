@@ -39,6 +39,10 @@ const Navbar = ({handleOpen}) => {
  setCartItems({})
  Swal.fire("Logged Out" , "You have been logged out" , 'success')
    }
+   const handleclick = (value , path)=>{
+setActiveTab(value)
+navigate(path)
+   }
   return (
     <div className='main-container flex justify-between py-5 items-center'>
     <div className="logo" onClick={()=>navigate('/')}>
@@ -47,7 +51,7 @@ const Navbar = ({handleOpen}) => {
     <div className='menus hidden md:block'>
      <ul className='flex gap-5 text-[#49557e] text-lg'>
         {menus.map((value,index)=>(
-            <li key={index} className={`text-lg cursor-pointer ${activeTab == value ? 'border-b-2 border-[#49557e]' : ''}`}onClick={()=>setActiveTab(value)}>{value}</li>
+            <li key={index} className={`text-lg cursor-pointer ${activeTab == value ? 'border-b-2 border-[#49557e]' : ''}`}onClick={()=>handleclick(value.name , value.path)}>{value.name}</li>
         ))}
      </ul>
     </div>
@@ -74,8 +78,8 @@ const Navbar = ({handleOpen}) => {
 
 export default Navbar
 const menus = [
-    "home", 
-    "menu",
-    "about us",
-    "mobile app"
+   {name: "home", link : "/"} ,
+     {name: "menu", link : "/menu"} ,
+     {name: "about us", link : "/about"} 
+   
 ]
