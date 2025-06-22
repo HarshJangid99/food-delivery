@@ -14,7 +14,7 @@ const Success = () => {
 
       try {
         const response = await axios.post(
-          'http://localhost:4000/api/order/order-placed',
+          'https://food-delivery-4z3h.onrender.com/api/order/order-placed',
           {
             name: details.name,
             items: details.items,

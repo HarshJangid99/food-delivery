@@ -14,7 +14,7 @@ const Navbar = ({handleOpen}) => {
     const {cartItems , setCartItems, token , setToken} = useContext(StoreContext)
     const fetchProfile=async()=>{
    try{
-       const response =await axios.get("http://localhost:4000/api/user/profile" ,{
+       const response =await axios.get("https://food-delivery-4z3h.onrender.com/api/user/profile" ,{
         headers: {
           Authorization : `Bearer ${token}`
         }

@@ -51,7 +51,7 @@ const PlaceOrder = () => {
 
             const stripe  = await stripePromise
         try{
-            const response = await axios.post('http://localhost:4000/api/order/create-checkout-session' , {cartItems} , {
+            const response = await axios.post('https://food-delivery-4z3h.onrender.com/api/order/create-checkout-session' , {cartItems} , {
     headers: { Authorization: `Bearer ${token}` }, // ✅ corrected Bearer spelling & colon
   })
             if(response.data.success){

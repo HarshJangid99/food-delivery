@@ -43,7 +43,7 @@ const contextValue = {
 }
         const updateCart = async()=>{
 try{
-    const response =await axios.patch('http://localhost:4000/api/cart/updatecart' ,{cart : cartItems} , {
+    const response =await axios.patch('https://food-delivery-4z3h.onrender.com/api/cart/updatecart' ,{cart : cartItems} , {
     headers : {
           
       Authorization: `Bearer ${token}` // if using auth
@@ -72,7 +72,7 @@ useEffect(()=>{
 
 const cartReload = async()=>{
     try{
-        const response = await axios.get('http://localhost:4000/api/cart/refreshcart' , {
+        const response = await axios.get('https://food-delivery-4z3h.onrender.com/api/cart/refreshcart' , {
             headers : {
                 Authorization : `Bearer ${token}`
             }
@@ -84,7 +84,7 @@ const cartReload = async()=>{
 }
  const fetchFood = async()=>{
   try{
-    const response =await axios.get('http://localhost:4000/api/food/list')
+    const response =await axios.get('https://food-delivery-4z3h.onrender.com/api/food/list')
     if(response.data.success){
       setFood(response.data.data)
      

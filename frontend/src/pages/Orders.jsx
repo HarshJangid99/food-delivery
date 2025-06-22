@@ -7,7 +7,7 @@ const Orders = () => {
     const {token} = useContext(StoreContext)
     const fetchorders = async()=>{
     try{
- const response = await axios.get('http://localhost:4000/api/order/userorders' , {
+ const response = await axios.get('https://food-delivery-4z3h.onrender.com/api/order/userorders' , {
     headers : {
         Authorization  : `Bearer ${token}`
     }

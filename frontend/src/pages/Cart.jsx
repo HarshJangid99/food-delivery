@@ -30,7 +30,7 @@ useEffect
        <div className='flex flex-col '>
            {data.map((value,index)=>(
             <div key={index} className='grid grid-cols-6 py-3'>
-            <img src={`http://localhost:4000/uploads/${value.image}`} alt="" className='w-14'/>
+            <img src={`https://food-delivery-4z3h.onrender.com/uploads/${value.image}`} alt="" className='w-14'/>
             <p>{value.name}</p>
             <p className='font-semibold'>$ {value.price}</p>
             <p>{cartItems[value._id]}</p>

@@ -86,7 +86,7 @@ const Popular = () => {
    <div key={index} className='px-4'>
  <div className='h-[450px] relative bg-transparent/50 text-white ' >
  <div className='image h-[60%] rounded-b-3xl overflow-hidden'>
-<img src={`http://localhost:4000/uploads/` + value.image} alt="" className='h-full w-full object-cover' />
+<img src={`https://food-delivery-4z3h.onrender.com/uploads/` + value.image} alt="" className='h-full w-full object-cover' />
  </div>
  <div className='h-[40%] mt-4 flex flex-col items-center gap-3 p-3'>
   <img src={assets.rating_starts} alt="" />

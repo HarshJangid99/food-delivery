@@ -49,7 +49,7 @@ const Registration = ({handleClose})=>{
         validationSchema : validationSchema,
        onSubmit : async(values , {resetForm}) => {
   try {
-    const response = await axios.post('http://localhost:4000/api/user/register', {
+    const response = await axios.post('https://food-delivery-4z3h.onrender.com/api/user/register', {
       name: values.name,
       email: values.email,
       password: values.password
@@ -133,7 +133,7 @@ const Login = ({handleClose})=>{
         validationSchema : validationSchema,
        onSubmit : async(values , {resetForm}) => {
   try {
-    const response = await axios.post("http://localhost:4000/api/user/login", {
+    const response = await axios.post("https://food-delivery-4z3h.onrender.com/api/user/login", {
       email: values.email,
       password: values.password
     });

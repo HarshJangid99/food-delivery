@@ -56,7 +56,7 @@ addToCart(id)
   return(
      <div  className=' flex flex-col gap-2 shadow-lg rounded-t-3xl overflow-hidden '>
                   <div className='h-[60%] relative'>
-  <img src={`http://localhost:4000/uploads/` + image} alt="" className='h-full w-full object-fit ' />
+  <img src={`https://food-delivery-4z3h.onrender.com/uploads/` + image} alt="" className='h-full w-full object-fit ' />
   {!cartItems[id] ? <img src={assets.add_icon_white} className='cursor-pointer absolute bottom-2 h-10 right-2' onClick={() => handleadd(id)}/> : <div className=' flex items-center p-1 rounded-3xl bg-white gap-3 absolute right-2 bottom-2'>
     <img src={assets.remove_icon_red} className='cursor-pointer' alt="" onClick={()=>removeFromCart(id)} />
     {cartItems[id]}
